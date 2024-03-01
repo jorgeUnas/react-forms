@@ -3,7 +3,9 @@ import styles from "./Input.module.css";
 
 function Input() {
     const [userInput, setUserInput] = useState('');
-
+    function handleUserInput(e) {
+    setUserInput(e.target.value);
+    }
   return (
     <>
       <div className={styles.emailContainer}>
@@ -15,7 +17,7 @@ function Input() {
         </p>
         <form>
           <label for="email">Email: </label>
-          <input id="email" type="text"  />
+          <input id="email" type="text" onChange={handleUserInput} />
         </form>
       </div>
       <div className={styles.inputDisplay}>
