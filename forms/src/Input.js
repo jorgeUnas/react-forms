@@ -17,12 +17,12 @@ function Input() {
         </p>
         <form>
           <label for="email">Email: </label>
-          <input id="email" type="text" onChange={handleUserInput} />
+          <input id="email" type="text" onChange={handleUserInput} value={userInput} />
         </form>
       </div>
       <div className={styles.inputDisplay}>
         <h2>Current User Input: </h2>
-        <h4></h4>
+        <h4>{userInput}</h4>
       </div>
     </>
   );
